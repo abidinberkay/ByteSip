@@ -1,0 +1,38 @@
+<!--
+  ByteSip plugin descriptor.
+  Registers:
+    - A notification group used for all break reminders.
+    - An application service that owns the scheduler.
+    - A post-startup activity that boots the scheduler when a project opens.
+-->
+<idea-plugin>
+    <id>com.bytesip</id>
+    <name>ByteSip</name>
+    <vendor email="hello@bytesip.dev" url="https://bytesip.dev">ByteSip</vendor>
+
+    <description><![CDATA[
+        <p><b>ByteSip</b> — fun developer micro-break reminders.</p>
+        <ul>
+          <li>Water reminders every 25 minutes</li>
+          <li>Eye-rest reminders every 50 minutes</li>
+          <li>Movement reminders every 90 minutes</li>
+        </ul>
+        <p>Non-blocking IntelliJ notifications with snooze and done actions.</p>
+    ]]></description>
+
+    <!-- Required platform module. -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Single balloon notification group used by all break reminders. -->
+        <notificationGroup id="ByteSip"
+                           displayType="BALLOON"
+                           isLogByDefault="false"/>
+
+        <!-- Application-level service owning the shared scheduler. -->
+        <applicationService serviceImplementation="com.bytesip.BreakScheduler"/>
+
+        <!-- Run once when a project finishes loading. Boots the scheduler. -->
+        <postStartupActivity implementation="com.bytesip.ByteSipStartupActivity"/>
+    </extensions>
+</idea-plugin>
