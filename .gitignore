@@ -1,7 +1,21 @@
+# Gradle
 .gradle/
 build/
+
+# IntelliJ IDEA
 .idea/
 *.iml
 out/
+
+# Kotlin
 .kotlin/
+
+# Local properties
 local.properties
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+*.log

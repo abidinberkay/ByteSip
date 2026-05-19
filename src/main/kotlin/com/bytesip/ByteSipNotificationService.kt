@@ -15,7 +15,7 @@ import java.time.Duration
  * All notifications:
  *  - use the "ByteSip" BALLOON notification group registered in plugin.xml,
  *  - are non-blocking (no modal dialogs),
- *  - expose a "Done" and a "Snooze 5 min" action.
+ *  - expose a "Done" and a "Snooze 1 min" action.
  *
  * The class is stateless — methods receive everything they need as parameters.
  */
@@ -23,7 +23,7 @@ object ByteSipNotificationService {
 
     private val log = Logger.getInstance(ByteSipNotificationService::class.java)
     private const val GROUP_ID = "ByteSip"
-    private val SNOOZE_DURATION = Duration.ofSeconds(10)
+    private val SNOOZE_DURATION = Duration.ofMinutes(1)
 
     /**
      * Show a reminder for [type] inside [project].

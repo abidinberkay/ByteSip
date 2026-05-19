@@ -1,6 +1,11 @@
 // ByteSip — IntelliJ plugin build script (Kotlin DSL)
 // Uses the IntelliJ Platform Gradle Plugin 2.x and targets IntelliJ 2024.2+ with Java 21.
 
+tasks.withType<JavaCompile>().configureEach {
+    sourceCompatibility = JavaVersion.VERSION_21.toString()
+    targetCompatibility = JavaVersion.VERSION_21.toString()
+}
+
 plugins {
     kotlin("jvm") version "2.0.21"
     id("org.jetbrains.intellij.platform") version "2.1.0"
