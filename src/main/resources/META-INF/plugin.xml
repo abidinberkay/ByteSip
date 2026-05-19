@@ -8,17 +8,44 @@
 <idea-plugin>
     <id>com.bytesip</id>
     <name>ByteSip</name>
-    <vendor email="hello@bytesip.dev" url="https://bytesip.dev">ByteSip</vendor>
+    <vendor email="abidinberkay@gmail.com" url="https://github.com/berkaysimsek">Berkay Simsek</vendor>
 
     <description><![CDATA[
-        <p><b>ByteSip</b> — fun developer micro-break reminders.</p>
+        <h2>ByteSip — Healthy Coding Reminders for Developers</h2>
+
+        <p>Tired of coding for hours without a break? <b>ByteSip</b> is your friendly wellness companion that lives inside your IDE. It quietly reminds you to take care of yourself with witty, non-intrusive balloon notifications — so you can keep shipping code without sacrificing your health.</p>
+
+        <h3>Features</h3>
         <ul>
-          <li>Water reminders every 25 minutes</li>
-          <li>Eye-rest reminders every 50 minutes</li>
-          <li>Movement reminders every 90 minutes</li>
+          <li><b>Water reminders</b> — every 25 minutes, because your kidneys deserve better than coffee.</li>
+          <li><b>Eye-rest reminders</b> — every 50 minutes, following the 20-20-20 rule for healthier eyes.</li>
+          <li><b>Movement reminders</b> — every 90 minutes, so your spine doesn't file a critical bug report.</li>
         </ul>
-        <p>Non-blocking IntelliJ notifications with snooze and done actions.</p>
+
+        <h3>Why ByteSip?</h3>
+        <ul>
+          <li>🎈 <b>Non-blocking notifications</b> — appears as a balloon at the bottom of your IDE, never interrupts your flow.</li>
+          <li>😄 <b>Funny, motivating messages</b> — randomly picked from a curated pool to keep things fresh.</li>
+          <li>⏸️ <b>Snooze or Done actions</b> — quickly dismiss or postpone with a single click.</li>
+          <li>⚙️ <b>Zero configuration</b> — install it and it just works. No setup required.</li>
+          <li>🪶 <b>Lightweight</b> — minimal resource usage, runs silently in the background.</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <p>ByteSip automatically starts when you open a project. It runs three independent timers — one for each reminder type — and displays a balloon notification at the bottom-right of your IDE when it's time for a break. Each notification includes a quick "Done" or "Snooze" action so you stay in control.</p>
+
+        <p><b>Code happy. Stay hydrated. Take breaks. Ship better code.</b></p>
     ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>1.0.0 — Initial Release</h3>
+        <ul>
+          <li>Water, eye-rest, and movement reminders with fixed intervals.</li>
+          <li>Randomized funny messages for each reminder type.</li>
+          <li>Done and Snooze actions on every notification.</li>
+          <li>Non-blocking balloon notifications.</li>
+        </ul>
+    ]]></change-notes>
 
     <!-- Required platform module. -->
     <depends>com.intellij.modules.platform</depends>

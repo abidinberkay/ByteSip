@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dir)",
       "Bash(java *)",
-      "PowerShell(Remove-Item *)"
+      "PowerShell(Remove-Item *)",
+      "Bash(./gradlew build *)",
+      "Bash(./gradlew buildPlugin)"
     ]
   }
 }
