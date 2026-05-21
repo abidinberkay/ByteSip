@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "com.bytesip"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -26,6 +26,7 @@ dependencies {
         // Target IntelliJ IDEA Community 2024.2 (uses JBR 21).
         intellijIdeaCommunity("2024.2")
         instrumentationTools()
+        pluginVerifier()
     }
 }
 
@@ -37,6 +38,7 @@ intellijPlatform {
             untilBuild = provider { null }
         }
     }
+
 }
 
 kotlin {

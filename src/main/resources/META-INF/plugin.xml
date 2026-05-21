@@ -29,15 +29,27 @@
           <li>⏸️ <b>Snooze or Done actions</b> — quickly dismiss or postpone with a single click.</li>
           <li>⚙️ <b>Zero configuration</b> — install it and it just works. No setup required.</li>
           <li>🪶 <b>Lightweight</b> — minimal resource usage, runs silently in the background.</li>
+          <li>🦆 <b>Rubber duck approved</b> — your rubber duck is worried about you too.</li>
         </ul>
+
+        <p><i>⚠️ Side effects may include: better posture, actual human interaction, and vaguely remembering what sunlight looks like.</i></p>
 
         <h3>How It Works</h3>
         <p>ByteSip automatically starts when you open a project. It runs three independent timers — one for each reminder type — and displays a balloon notification at the bottom-right of your IDE when it's time for a break. Each notification includes a quick "Done" or "Snooze" action so you stay in control.</p>
 
         <p><b>Code happy. Stay hydrated. Take breaks. Ship better code.</b></p>
+
+        <p><i>No developers were harmed in the making of this plugin. That's kind of the whole point.</i></p>
     ]]></description>
 
     <change-notes><![CDATA[
+        <h3>1.0.1</h3>
+        <ul>
+          <li>Added plugin icon visible in JetBrains Marketplace.</li>
+          <li>Added status bar widget showing reminder intervals (💧 25 · 👁 50 · 🚶 90).</li>
+          <li>Fixed Snooze action — now correctly reschedules after snooze fires.</li>
+        </ul>
+
         <h3>1.0.0 — Initial Release</h3>
         <ul>
           <li>Water, eye-rest, and movement reminders with fixed intervals.</li>
@@ -56,10 +68,12 @@
                            displayType="BALLOON"
                            isLogByDefault="false"/>
 
-        <!-- Application-level service owning the shared scheduler. -->
-        <applicationService serviceImplementation="com.bytesip.BreakScheduler"/>
-
         <!-- Run once when a project finishes loading. Boots the scheduler. -->
         <postStartupActivity implementation="com.bytesip.ByteSipStartupActivity"/>
+
+        <!-- Status bar widget showing countdown timers for each reminder type. -->
+        <statusBarWidgetFactory implementation="com.bytesip.ByteSipStatusBarWidgetFactory"
+                                id="ByteSipStatusBar"
+                                order="first"/>
     </extensions>
 </idea-plugin>

@@ -5,7 +5,15 @@
       "Bash(java *)",
       "PowerShell(Remove-Item *)",
       "Bash(./gradlew build *)",
-      "Bash(./gradlew buildPlugin)"
+      "Bash(./gradlew buildPlugin)",
+      "Bash(flutter pub *)",
+      "PowerShell(flutter pub *)",
+      "PowerShell(flutter run *)",
+      "Bash(mv \"C:\\\\Users\\\\abidi\\\\OneDrive\\\\Desktop\\\\Projects\\\\bytesip\\\\src\\\\main\\\\resources\\\\META-INF\\\\light.svg\" \"C:\\\\Users\\\\abidi\\\\OneDrive\\\\Desktop\\\\Projects\\\\bytesip\\\\src\\\\main\\\\resources\\\\META-INF\\\\pluginIcon.svg\")",
+      "Bash(mv \"C:\\\\Users\\\\abidi\\\\OneDrive\\\\Desktop\\\\Projects\\\\bytesip\\\\src\\\\main\\\\resources\\\\META-INF\\\\dark.svg\" \"C:\\\\Users\\\\abidi\\\\OneDrive\\\\Desktop\\\\Projects\\\\bytesip\\\\src\\\\main\\\\resources\\\\META-INF\\\\pluginIcon_dark.svg\")",
+      "Bash(./gradlew compileKotlin)",
+      "Bash(./gradlew verifyPlugin)",
+      "Bash(./gradlew clean *)"
     ]
   }
 }
