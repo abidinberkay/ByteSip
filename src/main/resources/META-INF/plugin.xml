@@ -43,6 +43,13 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <h3>1.0.2</h3>
+        <ul>
+          <li>Refined UI and documentation for marketplace submission.</li>
+          <li>Enhanced icon visibility in both light and dark IDE themes.</li>
+          <li>Improved notification clarity and messaging.</li>
+        </ul>
+
         <h3>1.0.1</h3>
         <ul>
           <li>Added plugin icon visible in JetBrains Marketplace.</li>
