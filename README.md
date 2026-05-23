@@ -14,7 +14,7 @@ with your IDE:
 Every notification has two actions:
 
 - **Done** — dismiss the balloon, regular cadence continues.
-- **Snooze 5 min** — bump the same reminder by 5 minutes.
+- **Snooze 1 min** — bump the same reminder by 1 minutes.
 
 ## Tech stack
 
@@ -77,5 +77,5 @@ be installed via **Settings → Plugins → ⚙ → Install Plugin from Disk…*
 - A single application-level `@Service` (`BreakScheduler`) owns all timers, so
   opening multiple projects does not stack duplicate reminders.
 - Notifications dispatch onto the EDT before showing.
-- "Snooze 5 min" reschedules the affected break once; regular cadence resumes
+- "Snooze 1 min" reschedules the affected break once; regular cadence resumes
   automatically after the snoozed fire.

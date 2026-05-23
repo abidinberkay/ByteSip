@@ -49,8 +49,8 @@ object ByteSipNotificationService {
             }
         })
 
-        // "Snooze 10 sec" re-shows the same break type after a short delay.
-        notification.addAction(object : NotificationAction("Snooze 10 sec") {
+        // "Snooze 1 min" re-shows the same break type after a short delay.
+        notification.addAction(object : NotificationAction("Snooze 1 min") {
             override fun actionPerformed(e: AnActionEvent, n: Notification) {
                 log.info("ByteSip: Snooze clicked for $type — next fire in ${SNOOZE_DURATION.seconds} seconds")
                 n.expire()

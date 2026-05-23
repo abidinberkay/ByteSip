@@ -11,6 +11,6 @@ import java.time.Duration
  */
 enum class BreakType(val title: String, val interval: Duration, val icon: String) {
     WATER(title = "ByteSip — Water break", interval = Duration.ofMinutes(25), icon = "💧"),
-    EYES(title  = "ByteSip — Eye break",   interval = Duration.ofMinutes(50), icon = "👁"),
+    EYES(title  = "ByteSip — Eye break",   interval = Duration.ofMinutes(50), icon = "👀"),
     MOVE(title  = "ByteSip — Move break",  interval = Duration.ofMinutes(90), icon = "🚶");
 }
